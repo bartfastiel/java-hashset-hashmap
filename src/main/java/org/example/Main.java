@@ -2,6 +2,7 @@ package org.example;
 
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Map;
 import java.util.Set;
 
 public class Main {
@@ -22,7 +23,16 @@ public class Main {
         animalsFed.add(cat);
 
         for (String animal : animalsFed) {
-            System.out.println("Ich habe heute gefüttert: "+animal);
+            System.out.println("Ich habe heute gefüttert: " + animal);
         }
+
+        Map<String, String> favoriteFoods = new HashMap<>();
+        favoriteFoods.put(dog, "dogfood");
+        favoriteFoods.put(cat, "fish");
+        favoriteFoods.put(bird, "seeds");
+
+        String catsFavoriteFood = favoriteFoods.get(cat);
+        System.out.println("Lieblingsfutter der Katze: " + catsFavoriteFood);
+
     }
 }
