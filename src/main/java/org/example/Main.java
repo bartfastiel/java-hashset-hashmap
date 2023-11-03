@@ -22,10 +22,6 @@ public class Main {
         animalsFed.add(cat);
         animalsFed.add(cat);
 
-        for (String animal : animalsFed) {
-            System.out.println("Ich habe heute gefüttert: " + animal);
-        }
-
         Map<String, String> favoriteFoods = new HashMap<>();
         favoriteFoods.put(dog, "dogfood");
         favoriteFoods.put(cat, "fish");
@@ -34,5 +30,9 @@ public class Main {
         String catsFavoriteFood = favoriteFoods.get(cat);
         System.out.println("Lieblingsfutter der Katze: " + catsFavoriteFood);
 
+        for (String animal : animalsFed) {
+            String favoriteFood = favoriteFoods.get(animal);
+            System.out.println("Ich habe heute gefüttert: " + animal + " (Lieblingsfutter: " + favoriteFood + ")");
+        }
     }
 }
